@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <script  src="./demo.js" type="module" defer></script> -->
+    
+    <script type="module">
+        import {reverseStr} from './回文算法.js'
+        import {compare} from './排序算法.js'
+        import {objSort} from './根据对象属性排序算法.js'
+     
+        {
+          // 回文算法demo
+          let songName = "悬崖华尔兹"
+          console.log("回文算法",reverseStr(songName)) // 兹尔华崖悬
+        }
+            
+        {
+          // 排序算法demo
+          let arr1 = [0,1,5,10,15]
+          // console.log(arr1.sort()) 排序会不对，看该算法详情
+          console.log("排序算法",arr1.sort(compare))
+        }
+ 
+        {
+          // 根据对象属性排序算法demo
+          var arr1 = [
+            {name:"apple",age:0},
+            {name:"pear",age:21},
+            {name:"book",age:5},
+            {name:"water",age:3},
+            {name:"TV",age:20}]
+          console.log("根据对象属性排序：",arr1.sort(objSort("age")))
+        }
+    </script>
+</body>
+</html>
